@@ -1,0 +1,15 @@
+.grid {
+    border: 2px blue solid;
+    width: 1000px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 20% 50% 50px;
+  }
+  
+.box {
+    background-color: beige;
+    color: black;
+    border-radius: 5px;
+    border: 2px dodgerblue solid;
+  }
