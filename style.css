@@ -1,10 +1,9 @@
 .grid {
     border: 2px blue solid;
-    width: 1000px;
     height: 500px;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 20% 50% 50px;
+    grid-template: repeat(3, 1fr) / 3fr minmax(50px, 300px) 1fr;
+    row-gap: 20px;
   }
   
 .box {
@@ -13,3 +12,12 @@
     border-radius: 5px;
     border: 2px dodgerblue solid;
   }
+
+/* This is for creating item grids inside the main grid */
+.a {
+  grid-row-start: 1;
+  grid-row-end: 5;
+  /* refracter your code */
+  grid-row: 1/5;
+  grid-column: 1/5;
+}
