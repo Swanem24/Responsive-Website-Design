@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+  background-color: black;
 }
 
 .container {
@@ -8,17 +8,27 @@ body {
   max-width: 1200px;
   position: relative;
   margin: auto;
-  gap: 10px;
-  grid-template-rows: 200px 100px 600px 200px;
+  gap: 5px;
+  grid-template-rows: 150px 100px 600px 100px;
   grid-template-areas:  "header header"
                         "nav nav"
                         "left right"
                         "footer footer";
 }
 
-h1, h2 {
-  font-family: Arial, Helvetica, sans-serif;
+h1, h2, h3 {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: red;
+  transition: 0.5s;
+  opacity: 80%;
 }
 
 header {
@@ -29,24 +39,39 @@ header {
 nav {
   background-color: beige;
   grid-area: nav;
+  text-align: center;
 }
 
 nav li, footer li {
   display: inline-block;
   margin: 20px;
+  font-weight: bold;
 }
 
 .left {
-  background-color: dodgerblue;
+  background-color: rgb(80, 112, 145);
   grid-area: left;
+}
+
+.left li {
+  list-style:decimal;
 }
 
 .right {
   background-color: beige;
   grid-area: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  width: 500px;
+  height: 590px;
 }
 
 footer {
   background-color: dodgerblue;
   grid-area: footer;
+  text-align: center;
 }
